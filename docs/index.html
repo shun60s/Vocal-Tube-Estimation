@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vocal Tube Estimation   </title>
+<meta name="description" content="A trial estimation of vocal tract as very simple tube model " />
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-lg px-3 my-5 markdown-body">
+<h1>Vocal Tube Estimation   </h1>
+
+<p>A trial estimation of vocal tract as very simple tube model, two tube or three tube, 
+using several peak and drop-peak frequencies of vowel voice, by precomputed grid search and downhill simplex method.<br /></p>
+
+<p><a href="https://github.com/shun60s/Vocal-Tube-Estimation/">github repository</a><br /></p>
+
+<h2>usage   </h2>
+
+<p>example of vowel /a/.  Result will save as figures in the result_figure directory. Input wav format should be mono,16bit,16Khz.<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+python3 pks2tube1.py -w wav/a_1-16k.wav -r result_figure <br />
+</code></pre></div></div>
+<p><img src="a_1-16k_3.png" alt="figure1" ><br /></p>
+
+
+<p>example of vowel /i/<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+python3 pks2tube1.py -w wav/i_1-16k.wav -r result_figure <br />
+</code></pre></div></div>
+<p><img src="i_1-16k_6.png" alt="figure2" ><br /></p>
+
+
+<p>example of vowel /u/<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+python3 pks2tube1.py -w wav/u_1-16k.wav -r result_figure <br />
+</code></pre></div></div>
+<p><img src="u_1-16k_3.png" alt="figure3" ><br /></p>
+
+
+<p>example of vowel /e/<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+python3 pks2tube1.py -w wav/e_1-16k.wav -r result_figure <br />
+</code></pre></div></div>
+<p><img src="e_1-16k_3.png" alt="figure4" ><br /></p>
+
+
+<p>example of vowel /o/.  Specify -t 3, due to vowel /o/ uses three tube model<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+python3 pks2tube1.py -w wav/o_1-16k.wav -r result_figure -t 3 <br />
+</code></pre></div></div>
+<p><img src="o_1-16k_3.png" alt="figure5" ><br /></p>
+
+
+<p>make precomputed data for grid search to estimate two tube model<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+python3 pre_compute1.py <br />
+</code></pre></div></div>
+<p>It will save pks_dpks_stack_tube2.npz.<br /></p>
+
+
+<p>make precomputed data for grid search to estimate three tube model <br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+python3 pre_compute1.py -t 3 <br />
+</code></pre></div></div>
+<p>It will save pks_dpks_stack_tube3.npz.<br /></p>
+
+
+<p>re-sampling wav to 16Khz sampling<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+python3 resample1.py -w wav-file-name(mono,16bit)<br />
+</code></pre></div></div>
+
+<!--
+<h2>Document  </h2>
+
+<p>For more information, please see <a href="https://wsignal.sakura.ne.jp/onsei2007/xxxx.html">related WEB</a> or 
+<a href="https://wsignal.sakura.ne.jp/onsei2007/xxxx.html">same content in Japanese</a><br /></p>
+
+-->
+
+<h2>License    </h2>
+<p>MIT<br />
+except LPC.py<br /></p>
+<br />
+<br />
+</div>
+</body>
+</html>
