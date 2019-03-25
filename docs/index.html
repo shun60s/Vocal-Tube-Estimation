@@ -11,7 +11,7 @@
 <div class="container-lg px-3 my-5 markdown-body">
 <h1>Vocal Tube Estimation   </h1>
 
-<p>A trial estimation of vocal tract as very simple tube model, two tube or three tube, 
+<p>A trial estimation of vocal tract as very simple tube model, two tubes model or three tubes model, 
 using several peak and drop-peak frequencies of vowel voice, by precomputed grid search and downhill simplex method.<br /></p>
 
 <p><a href="https://github.com/shun60s/Vocal-Tube-Estimation/">github repository</a><br /></p>
@@ -46,21 +46,21 @@ python3 pks2tube1.py -w wav/e_1-16k.wav -r result_figure <br />
 <p><img src="e_1-16k_3.png" alt="figure4" ><br /></p>
 
 
-<p>example of vowel /o/.  Specify -t 3, due to vowel /o/ uses three tube model<br /></p>
+<p>example of vowel /o/.  Specify -t 3, due to vowel /o/ uses three tubes model<br /></p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 python3 pks2tube1.py -w wav/o_1-16k.wav -r result_figure -t 3 <br />
 </code></pre></div></div>
 <p><img src="o_1-16k_3.png" alt="figure5" ><br /></p>
 
 
-<p>make precomputed data for grid search to estimate two tube model<br /></p>
+<p>make precomputed data for grid search to estimate two tubes model<br /></p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 python3 pre_compute1.py <br />
 </code></pre></div></div>
 <p>It will save pks_dpks_stack_tube2.npz.<br /></p>
 
 
-<p>make precomputed data for grid search to estimate three tube model <br /></p>
+<p>make precomputed data for grid search to estimate three tubes model <br /></p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 python3 pre_compute1.py -t 3 <br />
 </code></pre></div></div>
@@ -72,13 +72,13 @@ python3 pre_compute1.py -t 3 <br />
 python3 resample1.py -w wav-file-name(mono,16bit)<br />
 </code></pre></div></div>
 
-<!--
+
 <h2>Document  </h2>
 
-<p>For more information, please see <a href="https://wsignal.sakura.ne.jp/onsei2007/xxxx.html">related WEB</a> or 
-<a href="https://wsignal.sakura.ne.jp/onsei2007/xxxx.html">same content in Japanese</a><br /></p>
+<p>For more information, please see <a href="https://wsignal.sakura.ne.jp/onsei2007/vocal-tube-estimation-e.html">related WEB</a> or 
+<a href="https://wsignal.sakura.ne.jp/onsei2007/vocal-tube-estimation.html">same content in Japanese</a><br /></p>
 
--->
+
 
 <h2>License    </h2>
 <p>MIT<br />

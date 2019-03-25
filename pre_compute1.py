@@ -1,6 +1,6 @@
 #coding:utf-8
 
-# precompute value at grid of LA_ranges and save as a npz file, Or load pre-computed data from a npz file
+# precompute value at grid of LA_ranges and save as a npz file, Or load precomputed data from a npz file
 #
 
 import sys
@@ -122,7 +122,7 @@ class pre_comute(object):
                     cost0i= self.rank_value[i]
                     L1= self.iters_stack[self.rank_index[i]][0]
                     L2= self.iters_stack[self.rank_index[i]][1]
-                    if L1 > L2 and abs( cost0i - cost00) < 1.0 : # get  L1 > L2 and cost0 difference < 1.0
+                    if L1 >= L2 and abs( cost0i - cost00) < 1.0 : # get  L1 >= L2 and cost0 difference < 1.0( 1.0 is tentative value)
                         select_index=i
                         break
                 #print (' select_index', select_index)
