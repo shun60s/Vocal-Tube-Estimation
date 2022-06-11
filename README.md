@@ -5,6 +5,8 @@ using several peak and drop-peak frequencies of vowel voice, by precomputed grid
 
 [github repository](https://github.com/shun60s/Vocal-Tube-Estimation/)  
 
+There is another version, Vocal-Tube-Estimation2, in github repository.  
+
 ## usage   
 
 example of vowel /a/.  Result will save as figures in the result_figure directory. Input wav format should be mono,16bit,16Khz.  
