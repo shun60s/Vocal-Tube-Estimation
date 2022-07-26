@@ -5,7 +5,7 @@ using several peak and drop-peak frequencies of vowel voice, by precomputed grid
 
 [github repository](https://github.com/shun60s/Vocal-Tube-Estimation/)  
 
-There is another version, [Vocal-Tube-Estimation2](https://github.com/shun60s/Vocal-Tube-Estimation2/), in github repository.  
+There is other version, [Vocal-Tube-Estimation2](https://github.com/shun60s/Vocal-Tube-Estimation2/) and [Vocal-Tube-Estimation3](https://github.com/shun60s/Vocal-Tube-Estimation3/),in github repository.  
 
 ## usage   
 
